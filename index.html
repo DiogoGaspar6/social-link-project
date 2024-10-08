@@ -16,7 +16,7 @@
   </head>
   <body>
       <div class="container">
-        <img src="assets/images/avatar-jessica.jpeg" alt="Foto de Perfil" />
+        <img src="assets/images/IMG_3982 2.jpeg" alt="Foto de Perfil" />
         <p class="name">Diogo Gaspar</p>
         <p class="location">Vila Praia de Ancora, Portugal</p>
         <p class="desc">"Front-end Developer and Studying"</p>
@@ -35,5 +35,27 @@
       <a href="https://github.com/DiogoGaspar6" target="_blank">Diogo Gaspar</a
       >.
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (location.protocol === 'https:' || location.hostname === 'localhost') {
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('portrait').then(() => {
+              if (screen.orientation.type.startsWith('portrait')) {
+                console.log('Orientation locked to portrait successfully.');
+              } else {
+                console.error('Failed to lock orientation to portrait.');
+              }
+            }).catch(function(error) {
+              console.error('Orientation lock failed: ', error);
+            });
+          } else {
+            console.warn('Screen orientation lock is not supported by this browser.');
+          }
+        } else {
+          console.warn('Screen orientation lock can only be used in secure contexts (HTTPS or localhost).');
+        }
+      });
+    </script>
   </body>
 </html>

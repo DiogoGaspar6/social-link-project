@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body{
   font-family: 'Montserrat';
   background-color: black;
@@ -7,7 +12,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 98vw;
+  width: 100vw;
   min-height: 100vh;
 }
 div.container{
@@ -16,12 +21,10 @@ div.container{
   justify-content: center;
   flex-direction: column;
   background-color: hsl(0, 0%, 12%);
-  width: 80vw;
-  max-width: 400px;
-  height: 80vh;
-  max-height: 600px;
+  width: 30vw;
+  height: 60vh;
   padding: 20px;
-  border-radius: 5%;
+  border-radius: 2em;
   box-sizing: border-box;
 }
 
@@ -32,8 +35,8 @@ div.container{
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  height: 100%;
-  padding-bottom: 5%;
+  height: auto;
+  padding: 1em;
 }
 
 .redesSociais > div{
@@ -41,11 +44,10 @@ div.container{
   text-align: center;
   background-color: hsl(0, 0%, 20%);
   border-radius: 5px;
-  width: 100%;
+  width: 70%;
   color: white;
   text-decoration: none;
   height: auto;
-  max-width: 300px;
 }
 
 .redesSociais > div:hover{
@@ -77,22 +79,26 @@ p{
 }
 
 p.name{
-  margin-bottom: 0;
   font-size: 2rem;
 }
 
 p.location{
-  margin-top: 3%;
-  font-size: 1.5rem;
+  margin-top: 0.5em;
+  font-size: 1.1em;
   color: hsl(75, 94%, 57%)
 }
 
 p.desc{
-  font-size: 1rem;
-  text-decoration: dashed;
+  font-size: 0.8em;
+  margin-top: 4em;
 }
 
 .attribution{
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
   background-color: white;
   margin: auto ;
 }
@@ -104,4 +110,63 @@ p.desc{
 .attribution > a:hover{
   color: #2f6a18;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1240px) {
+  div.container{
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.container{
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  div.container{
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  div.container{
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .redesSociais{
+    gap: 0.5rem;
+  }
+
+  .redesSociais > div{
+    padding: 5px;
+  }
+
+  .redesSociais > div a{
+    font-size: 0.8em;
+  }
+
+  img{
+    width: 80px;
+    height: 80px;
+  }
+
+  p.name{
+    font-size: 1.5rem;
+  }
+
+  p.location{
+    font-size: 0.8em;
+  }
+
+  p.desc{
+    font-size: 0.7em;
+  }
+
+  .attribution{
+    font-size: 0.7em;
+  }
 }
