@@ -39,7 +39,16 @@ div.container{
   padding: 1em;
 }
 
-.redesSociais > div{
+.redesSociais > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.redesSociais > a > div{
   padding: 10px;
   text-align: center;
   background-color: hsl(0, 0%, 20%);
@@ -50,14 +59,11 @@ div.container{
   height: auto;
 }
 
-.redesSociais > div:hover{
+.redesSociais > a > div:hover{
   background-color: hsl(75, 94%, 57%);
+  color: black;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-}
-
-.redesSociais > div:hover a{
-  color: black;
 }
 
 a{
